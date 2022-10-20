@@ -21,7 +21,7 @@ router.post('/signup', (req, res) => {
             status: "FAILED",
             message: "Empty fields!"
         })
-    } else if (!/^[a-zA-Z]*$/.test(name)) {
+    } else if (!/^[a-zA-Z ]*$/.test(name)) {
         res.json({
             status: "FAILED",
             message: "Invalid name"
